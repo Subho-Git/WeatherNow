@@ -24,7 +24,7 @@ namespace WeatherNow.Helper
         {
             if(name!=null && cities != null)
             {
-                return cities.Find(x => x.City == name);
+                return cities.Find(x => x.City.ToUpper() == name.ToUpper());
             }
             return new CityModel();
         }
